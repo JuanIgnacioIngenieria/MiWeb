@@ -1,0 +1,135 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #000000, hsl(237, 38%, 10%), rgba(43, 27, 65, 0.3));
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1600px;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Texto principal general */
+.hero-text h1 {
+  font-size: 2.7rem; /* Móvil */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Juan Ignacio - glow blanco animado */
+.hero-text h1 .main-name {
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(255, 255, 255, 0.4);
+  
+}
+
+/* Lorenzo Pastrana - glow violeta animado */
+.hero-text h1 span {
+  color: #a78bfa;
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.7),
+               0 0 16px rgba(167, 139, 250, 0.5);
+  
+}
+
+.hero-text h1 span {
+  color: #a78bfa;
+}
+
+.hero-text h2 {
+  font-size: 1.1rem; /* Móvil */
+  font-weight: 300;
+  color: #dcd4f7;
+  margin-bottom: 1.5rem;
+}
+
+.typewriter {
+  font-size: 1rem; /* Móvil */
+  height: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 700px;
+  max-width: 90%;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-bar {
+  width: 4px;
+  height: 64px;
+  background: linear-gradient(to bottom, #a78bfa, transparent);
+  border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 5rem; /* Escritorio */
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem; /* Escritorio */
+  }
+
+  .typewriter {
+    font-size: 1.2rem; /* Escritorio */
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}

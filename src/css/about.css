@@ -1,0 +1,149 @@
+.about-section {
+  padding: 5rem 1rem;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  
+   }
+
+}
+
+.about-image-container,
+.about-text-container {
+  transition: all 1s ease;
+  
+}
+
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.image-background {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  background: linear-gradient(to right, #21074e, #8f16f1);
+  border-radius: 16px;
+  filter: blur(20px);
+  opacity: 0.25;
+  transition: opacity 1s ease;
+}
+
+.image-wrapper:hover .image-background {
+  opacity: 0.4;
+}
+
+.image-inner {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+}
+
+.highlight {
+  color: #a78bfa;
+}
+
+.about-text {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.about-text p + p {
+  margin-top: 1rem;
+}
+
+.about-button-outline {
+  padding: 0.75rem 2rem;
+  border: 2px solid #a78bfa; /* violeta */
+  color: #a78bfa;
+  background: transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+}
+
+.about-button-outline:hover {
+  background-color: #a78bfa;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #7700ff, #5d00ff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.about-button:hover .button-overlay {
+  opacity: 1;
+}
