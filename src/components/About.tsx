@@ -15,7 +15,7 @@ const About: React.FC = () => {
               <div className="image-background"></div>
               <div className="image-inner">
                 <img 
-                  src="/Images/yo.jpg"
+                  src={`${import.meta.env.BASE_URL}Images/yo.jpg`}
                   alt="Juan Ignacio Lorenzo Pastrana"
                   className="about-image"
                 />
